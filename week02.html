@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<!--
+	Rafael Perez Aguirre
+	perezaguirrerafael@gmail.com
+	IDIT
+	idit.programacion@iberopuebla.mx
+-->
+<html>
+	<head>
+		<title>Principles and Practices</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<div class="hero-decor-let">
+        <div>- January 23 -</div>
+    </div>
+
+		<a class="contact-btn" href="index.html"><i class="icon fa-caret-left"></i><span>Back</span></a>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><span class="my-span2">{ </span>Project Management<span class="my-span2"> }</span></h1>
+						<div class="parallax-item-number3 ">Week .02</div>
+
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Site -->
+							<section id="about" class="main">
+								<div class="spotlight animated fadeIn delay-1s slow">
+									<div class="content">
+										<header class="major">
+											<div class="section-subtitle ">The site <span class="my-span2">//</span></div>
+										</header>
+										<p>In this section I will describe the developer platform I use, the development environment and my project plan.</p>
+									</div>
+							</section>
+
+							<!-- Platform -->
+								<section id="intro" class="main">
+									<div class="animated fadeIn delay-1s slow slow" >
+										<div class="content">
+											<header class="major">
+												<div class="section-subtitle ">Developer platform <span class="my-span2">//</span></div>
+											</header>
+										</div>
+										<p>The development of this website was made on a MacBook Pro with the next characteristics:</p>
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-12"><span class="image fit"><img src="images/platform.png" alt="" /></span></div>
+											</div>
+										</div>
+								</section>
+
+								<!-- Environment -->
+									<section id="intro" class="main">
+										<div class="animated fadeIn delay-1s slow slow" >
+											<div class="content">
+												<header class="major">
+													<div class="section-subtitle ">Development environment <span class="my-span2">//</span></div>
+												</header>
+											</div>
+
+											<h2>Project repository</h2>
+											<p>The project repository can be found at the following <a href="https://gitlab.fabcloud.org/academany/fabacademy/2019/labs/puebla/students/rafael-aguirre" class="my-a">link</a>. Later we will explain how to clone it to work in the application having the development environment installed.</p>
+
+											<h2>Tools for development:</h2>
+											<ul>
+												<li><a href="https://atom.io/" class="my-a">Atom</a> as web IDE.</li>
+												<li><a href="https://git-scm.com/" class="my-a">Git</a> as version control software.</li>
+												<li><a href="https://about.gitlab.com/" class="my-a">Gitlab</a> as repository server git on the web.</li>
+												<li><a href="https://www.gitkraken.com/" class="my-a">GitKraken</a> as a multiplatform graphical interface for git.</li>
+												<li><a href="https://www.google.com/chrome/" class="my-a">Google Chrome</a>  as a web browser.</li>
+											</ul>
+											<p>The development tools are multiplatform and can also be <a href="https://atom.io/" class="my-a">downloaded</a> for free, so it is possible to install them in different operating systems such as Linux, Mac OS and Windows.</p>
+
+											<h2>Installation of Atom</h2>
+											<p>You can use some other text editor, however Atom is recommended for the benefits it has for development. To install it, it is necessary to download the installer according to the operating system on which it is developed.</p>
+											<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-12"><span class="image fit"><img src="images/atom.png" alt="" /></span></div>
+												</div>
+											</div>
+
+											<h2>Installation of git</h2>
+											<p>There are three easy ways to install Git on a Mac. The simplest way is to use Git's graphical installer, which you can download from the <a href="http://sourceforge.net/projects/git-osx-installer/" class="my-a">SourceForge</a> page.</p>
+											<p>An alternative is to install Git through <a href="http://www.macports.org" class="my-a">MacPorts</a>. If you have MacPorts installed, install Git with:</p>
+											<pre><code>$ sudo port install git-core +svn +doc +bash_completion +gitweb</code> </pre>
+											<p>Another alternative is <a href="http://brew.sh/" class="my-a">Homebrew</a>. If you already have Homebrew installed, install Git with:</p>
+											<pre><code>$ brew install git</code> </pre>
+											<p>For installation on other platforms, visit the official Git <a href="https://git-scm.com/downloads" class="my-a">download </a>site.</p>
+											<p>For more information on the use of Git see this <a href="http://rogerdudler.github.io/git-guide/index.es.html" class="my-a">guide</a>.</p>
+
+											<p>After having installed and configured the development environment, you must proceed to obtain the repository. We open a terminal and we position ourselves in the directory where the project is required.</p>
+											<pre><code>$ cd Documents/Gitlab</code> </pre>
+											<p>If you do not have the Gitlab directory, you can create it with the next command:</p>
+											<pre><code>$ mkdir Gitlab</code> </pre>
+
+											<p>Now you need to establish your username and email address. This is important because the commits in Git use this information, and it is introduced immutable in the commits you send:</p>
+											<pre><code>$ git config --global user.name "your name"
+$ git config --global user.email "your email"</code> </pre>
+
+											<h2>Get project files</h2>
+											<p>To install the project we must clone the source code of the project on our local machine with the next command:</p>
+											<pre><code>$ git clone https://gitlab.fabcloud.org/academany/fabacademy/2019/labs/puebla/students/rafael-aguirre.git</code> </pre>
+											<p>In the next image you can see the successful cloning:</p>
+											<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-12"><span class="image fit"><img src="images/gitclone.png" alt="" /></span></div>
+												</div>
+											</div>
+											<p>After cloning the repository, we must enter the repository directory with the following command:</p>
+											<pre><code>$ cd rafael-aguirre</code> </pre>
+											<p>Now you have the entire project ready to be able to edit or update it. Enjoy!</p>
+
+											<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-12"><span class="image fit"><img src="images/developer.png" alt="" /></span></div>
+												</div>
+											</div>
+										</div>
+									</section>
+
+									<!-- How -->
+										<section id="intro" class="main">
+											<div class="animated fadeIn delay-1s slow slow" >
+												<div class="content">
+													<header class="major">
+														<div class="section-subtitle ">How to <span class="my-span2">//</span></div>
+													</header>
+												</div>
+												<p>After having installed my developer environment, create and build my web page in the Atom editor. The structure of the project is as follows:</p>
+												<ul>
+													<li>In the root are the .html files</li>
+													<li>In the image folder you will find the images that are used in the site.</li>
+													<li>The assets folder is divided into css, where are the style sheets files that include my site, including the design, colors and animations, in the font folder you can find the fonts, in the js folder you will find the javascript files that allow to interact with HTML documents, manipulate the DOM tree, handle events, develop animations.</li>
+												</ul>
+												<p>In summary, html allows you to create the skeleton, css makes it beautiful and js gives life to your site.</p>
+												<p>For the development of my website I had no problems as they are knowledge that I already knew.</p>
+												<div class="box alt">
+													<div class="row gtr-uniform">
+														<div class="col-6"><span class="image fit"><img src="images/directory.png" alt="" /></span></div>
+														<div class="col-6"><span class="image fit"><img src="images/sshtml.png" alt="" /></span></div>
+														<div class="col-6"><span class="image fit"><img src="images/sscss.png" alt="" /></span></div>
+														<div class="col-6"><span class="image fit"><img src="images/ssjs.png" alt="" /></span></div>
+													</div>
+												</div>
+												<p>For the editing of images I use <a href="https://www.adobe.com/mx/products/photoshop/free-trial-download.html" class="my-a">Photoshop</a> and for the design of logos in svg format I use <a href="https://www.adobe.com/mx/products/illustrator/free-trial-download.html" class="my-a">Ilustrator</a>. For 3D models use <a href="https://www.autodesk.mx/products/maya/overview" class="my-a">Maya</a>.</p>
+												<p>For version control I use the <a href="https://www.gitkraken.com/git-client" class="my-a">GitKraken</a> platform, because it allows me to visualize all the changes in a friendly and cool way. However the commits I prefer to do them from terminal.</p>
+												<div class="box alt">
+													<div class="row gtr-uniform">
+														<div class="col-6"><span class="image fit"><img src="images/gitkraken.png" alt="" /></span></div>
+														<div class="col-6"><span class="image fit"><img src="images/commit.png" alt="" /></span></div>
+													</div>
+												</div>
+										</section>
+
+									<!-- Plan -->
+										<section id="intro" class="main">
+											<div class="animated fadeIn delay-1s slow slow" >
+												<div class="content">
+													<header class="major">
+														<div class="section-subtitle ">Project plan <span class="my-span2">//</span></div>
+													</header>
+												</div>
+												<p>For the realization of my project plan, I decided to use the <a href="https://www.gitkraken.com/glo" class="my-a">Glo Boards</a> tool, since it allows me to manage my tasks in a friendly way, besides being included in the <a href="https://www.gitkraken.com/git-client" class="my-a">GitKraken</a> platform that I use as a git graphical interface.</p>
+												<div class="box alt">
+													<div class="row gtr-uniform">
+														<div class="col-12"><span class="image fit"><img src="images/plan.png" alt="" /></span></div>
+													</div>
+												</div>
+										</section>
+					</div>
+
+					<!-- Footer -->
+						<footer id="footer">
+							<section>
+								<h2>Contact information</h2>
+								<dl class="alt">
+									<dt>Address</dt>
+									<dd>Universidad Iberoamericana Puebla &bull; Instituto de Diseño e Innovación Tecnológica - IDIT &bull; Blvd. del Niño Poblano 2901, Reserva Territorial Atlixcáyotl &bull; CP 72820 San Andrés Cholula, Puebla, México</dd>
+								</dl>
+							</section>
+							<section>
+
+								<dl class="alt">
+								<br><br>
+									<dt>Phone</dt>
+									<dd>+52 (984) 202-0840</dd>
+									<dt>Email</dt>
+									<dd><a href="mailto:idit.programacion@iberopuebla.mx">idit.programacion@iberopuebla.mx</a> &bull; <a href="mailto:perezaguirrerafael@gmail.com">perezaguirrerafael@gmail.com</a></dd>
+								</dl>
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/mozta.rpa" class="icon fa-facebook alt"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/rafamozta/" class="icon fa-instagram alt"><span class="label">Instagram</span></a></li>
+									<li><a href="https://github.com/Mozta" class="icon fa-github alt"><span class="label">GitHub</span></a></li>
+								</ul>
+
+								<div class="partcile-dec" data-parcount="90"><canvas width="1714" height="402" style="display: block; background: rgba(255, 255, 255, 0);"></canvas></div>
+							</section>
+							<p class="copyright">&copy; 2019. Design: <a href="http://fabacademy.org/2019/labs/puebla/students/rafael-aguirre">Rafael</a>.</p>
+						</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

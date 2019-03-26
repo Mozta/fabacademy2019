@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+<!--
+	Rafael Perez Aguirre
+	perezaguirrerafael@gmail.com
+	IDIT
+	idit.programacion@iberopuebla.mx
+-->
+<html>
+	<head>
+		<title>Computer-Controlled Machining</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<div class="hero-decor-let">
+        <div>- March 06 -</div>
+    </div>
+
+		<a class="contact-btn" href="index.html"><i class="icon fa-caret-left"></i><span>Back</span></a>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><span class="my-span2">{ </span>Computer-Controlled Machining<span class="my-span2"> }</span></h1>
+						<div class="parallax-item-number3 ">Week .08</div>
+
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+							<!-- PCB -->
+								<section id="intro" class="main">
+									<div class="spotlight animated fadeIn delay-1s slow slow" >
+										<div class="content">
+											<header class="major">
+												<div class="section-subtitle ">The router <span class="my-span2">//</span></div>
+											</header>
+											<p>This week we learned about computer controlled machining, which is a machine that allows us to cut some materials, in this case 15 mm wood.</p>
+										</div>
+										<span class="image"><img src="images/week08/asia.png" alt="" /></span>
+									</div>
+
+									<div class="content">
+										<p>For the team practice that consisted in characterizing the machine we had, we decided to make a test of engraving and cutting, our names on a plate created directly from the software and for the cutting test, we designed some pieces of assembly to be able to check the joints with this machine.</p>
+										<p>The machine that we have in the facilities of the fab, is the Asia Robotics SHOP1325, which I describe briefly below.</p>
+										<p>Details</p>
+										<ul>
+											<li>Power 4Hp at 24000 RPM's</li>
+											<li>Useful work area (X) 1220 x (Y) 2400 x (Z) 200mm</li>
+											<li>Pressure +/- 0.15 mm</li>
+										</ul>
+										<p>Supported materials</p>
+										<ul>
+											<li>ABS</li>
+											<li>Acrylic</li>
+											<li>ALUCOBOND / DIBOND ®</li>
+											<li>Aluminum Wax (for modeling)</li>
+											<li>Copper</li>
+											<li>Styrene</li>
+											<li>Solid Wood Brass - Soft</li>
+											<li>Solid Wood - Hard</li>
+											<li>MDF</li>
+											<li>Veneered MDF</li>
+											<li>Laminated MDF</li>
+											<li>Melamine on Agglomerate or MDF</li>
+											<li>Nylon (NYLAMID or NYLACERO ®)</li>
+											<li>OSB</li>
+											<li>Other non-ferrous materials</li>
+											<li>Solid polycarbonate</li>
+											<li>Polyethylenes</li>
+											<li>PVC (Solid and Foamed)</li>
+											<li>Phenolic resin (BAKELITE)</li>
+											<li>Resins</li>
+											<li>Solid surface</li>
+											<li>Triplay</li>
+										</ul>
+
+										<p>First we must build a 2D model in some CAD software, in this case I decided to use AutoCad, the assembly of the piece was at a distance of 15mm material. Then the file is exported in .DXF format</p>
+										<p>So that the machine can interpret the model, we use the Aspire software, which I had to install on my Macbook using Windows through Bootcamp, since there is no Mac version, a negative point in my opinion.</p>
+										<p>After installing it, it was necessary to install the PostProcessor corresponding to the machine we have, Asia Robotics. In this way, when we export it, only the one we will use to export will appear.</p>
+
+										<p>Once the Aspire software is open, we configure the values of our work area, in this case, the size of the wood sheet of 1220mm x 2440mm x 15mm, we move the position of origin XY and accept. Then we import our file and adjust if necessary. The software has basic tools where we can make certain adjustments.</p>
+										<p>We select the vectors for engraving, which must be the first thing that the machine has to do, and then we configure the tool that we will use, in this case, the 1/4-inch bit. We generate the roads and simulate in 3D, the same software allows it.</p>
+										<p>After doing the engraving, we precede to make the cuts or drawer, it is worth mentioning that to make assemblies it is recommendable to use backbones, in this way in the corners the tool will be a little more, generating a small circle inwards that will allow us to piece that fits reaches the bottom and makes a good connection.</p>
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-4"><span class="image fit"><img src="images/week08/1.PNG" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/week08/2.PNG" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/week08/3.PNG" alt="" /></span></div>
+											</div>
+										</div>
+										<p>Finally, we export our files, selecting the appropriate Post Processor and save. In our case we first save the file for engraving and then the cut file and save it in an usb.</p>
+										<p>With the files in the usb, we proceed to connect it to the machine. Although before that, we must place our wooden plate on sacrificial bed placed in the machine. Then we adjust the plate to the base with the help of small presses, in this way we ensure that it does not move.</p>
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-6"><span class="image fit"><img src="images/week08/20190311_085102.jpg" alt="" /></span></div>
+												<div class="col-6"><span class="image fit"><img src="images/week08/20190311_085143.jpg" alt="" /></span></div>
+											</div>
+										</div>
+										<p>In the machine we adjust the values X, Y and later Z, to be able to locate it we approach the closest to the plate and then slightly adjust the tip of the tool to touch the wood. Then we upload the file we need and proceed to execute the process.</p>
+
+										<blockquote>
+											We must be cautious and have security measures, wear a gown, some protective glasses and boots.
+										</blockquote>
+
+										<p>When I finished the engraving, we lifted the tool and proceeded to change the tip for the cutting. And we continue with the process. The result was the following.</p>
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-6"><span class="image fit"><img src="images/week08/20190311_085732.jpg" alt="" /></span></div>
+												<div class="col-6"><span class="image fit"><img src="images/week08/20190311_090137.jpg" alt="" /></span></div>
+											</div>
+										</div>
+									</div>
+								</section>
+								<!-- EAGLE -->
+									<section id="intro" class="main">
+										<div class="spotlight animated fadeIn delay-1s slow slow" >
+											<div class="content">
+												<header class="major">
+													<div class="section-subtitle ">something big <span class="my-span2">//</span></div>
+												</header>
+												<p>For this project, I decided to do something for my pet, a little rabbit, so I wanted to make a house, I was thinking about the design and decided not to follow the classic square houses, so I made my design based on an equilateral triangle.</p>
+											</div>
+										</div>
+
+										<div class="content">
+											<p>Take as a reference the measure of the lying rabbit, so that it could lie down without space problems, so it is longer than wide. Then I show my sketch, and first I draw it in pencil before going directly to the CAD.</p>
+											<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-12"><span class="image fit"><img src="images/week08/20190312_181354.jpg" alt="" /></span></div>
+												</div>
+											</div>
+											<p>After landing the idea of my design, I proceeded to draw it in AutoCad, where I traced my lines, established constraints and made the parametric design. Here are some photos of the process.</p>
+											<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-6"><span class="image fit"><img src="images/week08/casa1.png" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week08/casa2.png" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week08/casa3.png" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week08/casa4.png" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week08/casa5.png" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week08/casa6.png" alt="" /></span></div>
+												</div>
+											</div>
+											<p>When I finished the drawing in AutoCad, before going to cut my pieces, I had a little uncertainty in case my pieces or assemblies did not fit very well, so I decided to do a simulation, turning my 2D drawing into a 3D design and assembling the pieces . For that I wanted to use a new software for me, so I used Rhino. Create a new file and import my 2D model, then select my pieces and extrude to 15mm. It was here that I found my first error, a piece did not extrude correctly because there were double lines and unconnected points, ie open vectors, so I had to return to AutoCad to modify that piece, export again in DXF and import into Rhino.</p>
+											<p>After correctly extrude the parts of my model, I turned and moved the pieces to achieve an assembly, here I found the second error, the walls did not assemble correctly, that is, having these walls at an angle of 60º, the cut of the assembly generated a spacing that was not aesthetically correct, in addition to that height stood out too much, so I had to make some adjustments from AutoCad.</p>
+											<p>Once I finished doing the simulation correctly, I proceeded to save my files in an usb and change operating system to use Aspire.</p>
+											<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-6"><span class="image fit"><img src="images/week08/rhino2.png" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week08/rhino3.png" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week08/rhino1.png" alt="" /></span></div>
+												</div>
+											</div>
+											<p>In Aspire, configure the parameters necessary for my design and try to generate the trajectories, however, the walls marked error, since there were still open vectors and, although the Aspire software has a tool for joining open vectors, it did not work. I had to go back to AutoCad and modify it. This procedure was a headache, since I tried it in several ways and did not generate the paths correctly. However, after so much frustration I managed to make my design correctly and Aspire was able to generate the paths correctly.</p>
+											<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-6"><span class="image fit"><img src="images/week08/asp1.png" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week08/asp2.png" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week08/asp3.png" alt="" /></span></div>
+												</div>
+											</div>
+											<p>Export my file to be able to take it to the router, in this case it was only one of cutting. It should be mentioned that the cut in general was with the cut outside the line, but for the assemblies and circles of the triangles (front and back) were inside, thus ensuring that the spacing was the size of the material of 15mm. Save the file in an usb and proceed to download to the router machine to make my cut.</p>
+											<p>Below I show the process of this great feat.</p>
+											<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-6"><span class="image fit"><img src="images/week08/e1.jpg" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week08/e2.jpg" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week08/e3.jpg" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week08/e4.jpg" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week08/e6.jpg" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week08/e7.jpg" alt="" /></span></div>
+													<div class="col-12"><span class="image fit"><img src="images/week08/e8.jpg" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week08/e9.jpg" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week08/e11.jpg" alt="" /></span></div>
+													<div class="col-12"><span class="image fit"><img src="images/week08/e10.jpg" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week08/e12.jpg" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week08/e13.jpg" alt="" /></span></div>
+													<div class="col-12"><span class="image fit"><img src="images/week08/e14.jpg" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week08/e15.jpg" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week08/e16.jpg" alt="" /></span></div>
+												</div>
+											</div>
+											<p>When the pieces came out, I proceeded to sand them to remove splinters and give a better finish and then began to assemble, after several hours of work, it was a great satisfaction when the pieces were perfected.</p>
+											<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-6"><span class="image fit"><img src="images/week08/e17.jpg" alt="" /></span></div>
+												</div>
+											</div>
+											<p>Finally, I wanted to make an engraving, so I designed in Illustrator a vector of my rabbit standing on 2 legs, with his name on one side, Emmett II.</p>
+											<p>This technique could have done it in the same router but because of the finish, consider that it would be more professional in the laser cutting machine, than better to apply the different techniques learned.</p>
+											<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-6"><span class="image fit"><img src="images/week08/20181224_174605.jpg" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week08/emmett.png" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week08/20190312_112836.jpg" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week08/20190312_121952.jpg" alt="" /></span></div>
+													<div class="col-12"><span class="image fit"><img src="images/week08/20190312_130152.jpg" alt="" /></span></div>
+												</div>
+											</div>
+
+									</section>
+					</div>
+
+					<!-- Footer -->
+						<footer id="footer">
+							<section>
+								<h2>Contact information</h2>
+								<dl class="alt">
+									<dt>Address</dt>
+									<dd>Universidad Iberoamericana Puebla &bull; Instituto de Diseño e Innovación Tecnológica - IDIT &bull; Blvd. del Niño Poblano 2901, Reserva Territorial Atlixcáyotl &bull; CP 72820 San Andrés Cholula, Puebla, México</dd>
+								</dl>
+							</section>
+							<section>
+
+								<dl class="alt">
+								<br><br>
+									<dt>Phone</dt>
+									<dd>+52 (984) 202-0840</dd>
+									<dt>Email</dt>
+									<dd><a href="mailto:idit.programacion@iberopuebla.mx">idit.programacion@iberopuebla.mx</a> &bull; <a href="mailto:perezaguirrerafael@gmail.com">perezaguirrerafael@gmail.com</a></dd>
+								</dl>
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/mozta.rpa" class="icon fa-facebook alt"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/rafamozta/" class="icon fa-instagram alt"><span class="label">Instagram</span></a></li>
+									<li><a href="https://github.com/Mozta" class="icon fa-github alt"><span class="label">GitHub</span></a></li>
+								</ul>
+
+								<div class="partcile-dec" data-parcount="90"><canvas width="1714" height="402" style="display: block; background: rgba(255, 255, 255, 0);"></canvas></div>
+							</section>
+							<p class="copyright">&copy; 2019. Design: <a href="http://fabacademy.org/2019/labs/puebla/students/rafael-aguirre">Rafael</a>.</p>
+						</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

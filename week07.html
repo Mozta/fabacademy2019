@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<!--
+	Rafael Perez Aguirre
+	perezaguirrerafael@gmail.com
+	IDIT
+	idit.programacion@iberopuebla.mx
+-->
+<html>
+	<head>
+		<title>Electronics Design</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<div class="hero-decor-let">
+        <div>- February 27 -</div>
+    </div>
+
+		<a class="contact-btn" href="index.html"><i class="icon fa-caret-left"></i><span>Back</span></a>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><span class="my-span2">{ </span>Electronics Design<span class="my-span2"> }</span></h1>
+						<div class="parallax-item-number3 ">Week .07</div>
+
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+							<!-- PCB -->
+								<section id="intro" class="main">
+									<div class="spotlight animated fadeIn delay-1s slow slow" >
+										<div class="content">
+											<header class="major">
+												<div class="section-subtitle ">The test <span class="my-span2">//</span></div>
+											</header>
+											<p>We start the week with a basic explanation of electronics to have the necessary knowledge to design our circuit.</p>
+											<p>We learned the differences between the SMT (Surface Mount Technology) and the THT (Troughole Technology) components, which in our case, we will only use SMT.</p>
+											<p>For the tracks, to know the width and necessary space between components, if it is required to send to manufacture, it is possible to put very fine parameters, but in our case, when doing it by hand, it is preferable to put bigger measurements.</p>
+										</div>
+										<span class="image"><img src="images/week07/mdo3000-angle.jpg" alt="" /></span>
+									</div>
+
+									<div class="content">
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-6"><span class="image fit"><img src="images/week07/20190227_121324.jpg" alt="" /></span></div>
+												<div class="col-6"><span class="image fit"><img src="images/week07/20190227_121334.jpg" alt="" /></span></div>
+											</div>
+										</div>
+										<p>As a team, we went to the electronics lab where, with the help of an oscilloscope and a multimeter, we were able to measure a development card, in this case, an Arduino UNO.</p>
+										<p>First we load a program to the card, we use the classic hello world of electronics, which is to turn on a led.</p>
+
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-12"><span class="image fit"><img src="images/week07/arduino1.png" alt="" /></span></div>
+											</div>
+										</div>
+										<p>After loading the program in the arduino, with the help of an oscilloscope we proceeded to measure. We connect the oscilloscope tips and adjust the signal, then connect the tips to the card and measure the pulses that were sent when turning on a led.</p>
+										<p>It is a bit difficult to adjust the oscilloscope to capture and amplify the received signal and thus be able to visualize it better on the screen.</p>
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-6"><span class="image fit"><img src="images/week07/20190227_125200_1.gif" alt="" /></span></div>
+												<div class="col-6"><span class="image fit"><img src="images/week07/20190227_125503_2.gif" alt="" /></span></div>
+											</div>
+										</div>
+										<p>We loaded another program to the card, which sent 123 abc and we verified on the oscilloscope. With this we were able to verify signals from a PCB.</p>
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-12"><span class="image fit"><img src="images/week07/arduino2.png" alt="" /></span></div>
+											</div>
+										</div>
+										<p>Being a digital signal the wave is square and not undulating as it would be in an analogous signal. If it is 0 the wave is down, if it is 5 the wave is high.</p>
+										<p>It should be mentioned that these are not totally real values, since there is a small range for each lower and upper limit.</p>
+										<p>Then with the help of a multimeter, we measured the amperage, voltage and continuity, in this way we could use the multimeter to measure certain units of a PCB.</p>
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-12"><span class="image fit"><img src="images/week07/20190227_130052.jpg" alt="" /></span></div>
+											</div>
+										</div>
+									</div>
+								</section>
+								<!-- EAGLE -->
+									<section id="intro" class="main">
+										<div class="spotlight animated fadeIn delay-1s slow slow" >
+											<div class="content">
+												<header class="major">
+													<div class="section-subtitle ">EAGLE <span class="my-span2">//</span></div>
+												</header>
+												<p>EAGLE (acronym for Easily Applicable Graphical Layout Editor) is a program for designing diagrams and PCBs with a famous auto-router around the world of DiY electronic projects, because many versions of this program have a Freeware license and a large number of component libraries around the network.</p>
+											</div>
+											<span class="image"><img src="images/week07/eagle.jpg" alt="" /></span>
+										</div>
+
+										<div class="content">
+											<p>To make a PCB design, we must first create the schematic, which is where the logic of the circuit goes, in it we will draw the representation of the circuit. It is necessary to add the components that are used and then connect them through cables.
+	After creating the schematic the board is created, which is where the real connections of the components mediating paths will be.</p>
+											<p>Before creating my PCB in Eagle, I decided to draw my circuit to have everything defined. I put an Atiny 85 as a microcontroller, some resistors, LEDs, buttons and a capacitor. Then draw the plate, for that I insipire in design of a digivice.</p>
+											<p>In EAGLE create a new project, where I added my schematic and started looking for the components I needed, however, in the first point, it was difficult to find the components I wanted, there were some that were not, so I had to look for them on the internet, download and install them, that is, put the new libraries in the EAGLE libraries folder, then from the control panel enable the new libraries to appear.</p>
+											<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-6"><span class="image fit"><img src="images/week07/eagle01.png" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week07/eagle03.png" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week07/eagle04.png" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week07/eagle05.png" alt="" /></span></div>
+												</div>
+											</div>
+											<p>I did not find the Atiny85 microcontroller and the surface button, so I had to urge them. I added all my components to the schematic window, saved and proceeded to connect the cables; making the drawing of my circuit on paper, I help a lot in this part, since I had it defined, it was just a matter of joining and ready. Save and I gave you to create board, the real interesting part.</p>
+											<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-4"><span class="image fit"><img src="images/week07/eagle03.png" alt="" /></span></div>
+													<div class="col-4"><span class="image fit"><img src="images/week07/eagle04.png" alt="" /></span></div>
+													<div class="col-4"><span class="image fit"><img src="images/week07/eagle01.png" alt="" /></span></div>
+												</div>
+											</div>
+											<p>All the components appear below and outside the marked area, which is the area of the card, so you have to move them so they stay within the area. Afterwards and one of the worst headaches was to accommodate the components in such a way that when making the connections between them, they were all connected without getting in some wrong way or, cluttered tracks, tracks that can not join, closed roads since they stayed No exit, a great challenge.</p>
+											<p>After fighting for a long time trying to accommodate and connect everything in the best way, I managed to connect everything and without errors. The errors were something very notorious in this stage, since there were tracks to the air, overdraft tracks or tracks without exit.</p>
+											<p>Something that helped me a lot was to edit the design rules, where I modified the distance between tracks, pads and holes, as well as the size of the tracks. I also help to change the dimensions of the canvas, where adjusting to millimeters in 0.1 allowed me to move the components more freely.</p>
+											<p>Once finished joining the components, I proceeded to draw the outline of my card, for it I had to delete the one that comes by default and with the help of the line tool forms a rectangle without joining the vertices, because here I join them with arcs, to give a more versatile appearance.</p>
+											<p>I also added some text, to start my name and then not to get confused, I added an "RST" tag where the reset button goes.</p>
+											<p>Modify the edges to 0.8 as they indicated to me and then in layers hide all the measurements except to be left with the contour, and export in PNG image with a resolution of 1000dpi and in monochromatic.</p>
+											<p>Enseguida, oculte la capa de mediciones y habilite la de Top, traces y vias. Del mismo modo exporte en PNG.</p>
+											<p>Then I went to the fabmodules.org application where I loaded my file to be able to convert it to RML for the model, but, for some strange reason, my design mediated more than twice as many dimensions, I was moving several parameters and nothing, until I opened it Photoshop and still measuring twice. In the end, I came to the conclusion that possibly in the Mac version, something strange was happening, so I got a Windows and Eagle computer installed, opened my files (schematic and board), I did the same steps to export in PNG and then load the resulting image into fabmodules and go! my circuit already had the real measurements.</p>
+											<p>Set the engraving values (1/32) of the model and export the result in RML format.
+	Then I opened the Roland software and loaded my file, put the engraving tip in the model, made some small adjustments and loaded my file and started recording.</p>
+											<p>First I did some tests before recording the actual design. I realized that I was recording too much, to the point that it seemed cut, instead of recorded. I spent a lot of time moving parameters until I could adjust it correctly and this was the result.</p>
+											<p>Happy for my engraving, I proceeded to make the cut, I made the same steps but changing the parameters necessary for cutting (1/64). And execute the cut, it started well, but suddenly jumping out of my cut design, I start to destroy my circuit, leaving it in this horrible way.</p>
+											<p>When I saw the tremendous deviation, I wanted to let it finish to see what routes it did wrong.</p>
+											<p>I had to re-record my design on another plate.</p>
+
+											<p>An important step is to calculate the kerf, which is a small part of material burned by the laser that we lose when making a cut. This kerf is presented on both sides where the laser passes, half and half. We must calculate this small measure to take it into consideration in our cuts, for example, in a press-fit is very important to fit perfectly our pieces.</p>
+											<blockquote>
+												Different materials and configurations of the cutter influence to a greater or lesser extent the kerf.
+											</blockquote>
+
+											<p>In order to calculate the kerf in the laser cutter, after having obtained the optimal cut values, we performed the following experiment. We draw a small grid of rectangles to proceed to cut them, then we join the rectangles and measure the space left over. The model was built in Autocad, a rectangle of 10mm * 40mm which contains 10 rectangles</p>
+											<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-12"><span class="image fit"><img src="images/week04/rect.png" alt="" /></span></div>
+												</div>
+											</div>
+											<blockquote>
+												Cut 10 rectangles result 11 cuts, LOL.
+											</blockquote>
+											<p>After cutting them, we put the pieces together and measure with a vernier. The formula we applied was the following: ((100-98.25) / 11) / 2 = 0.0795 value that we decided to round to 0.08 mm.</p>
+											<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-12"><span class="image fit"><img src="images/week04/20190206_171302.jpg" alt="" /></span></div>
+												</div>
+											</div>
+											<p>In addition to our names, configurations and table to calculate the kerf, I decided to incorporate a kraken that I previously vectored in Illustrator, as part of the team test.</p>
+											<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-6"><span class="image fit"><img src="images/week04/20190206_172738.jpg" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week04/team.png" alt="" /></span></div>
+												</div>
+											</div>
+											<blockquote>
+												In these four layers, which number is 11. 12 13 14, were set up in four fixed processing mode.Vetor graph in the layer, where there is a bitmap or a fill graph.or which is in scan mode, processing will not work. Please place them in different layer, and choose cutting mode for vetor layer.
+											</blockquote>
+									</section>
+					</div>
+
+					<!-- Footer -->
+						<footer id="footer">
+							<section>
+								<h2>Contact information</h2>
+								<dl class="alt">
+									<dt>Address</dt>
+									<dd>Universidad Iberoamericana Puebla &bull; Instituto de Diseño e Innovación Tecnológica - IDIT &bull; Blvd. del Niño Poblano 2901, Reserva Territorial Atlixcáyotl &bull; CP 72820 San Andrés Cholula, Puebla, México</dd>
+								</dl>
+							</section>
+							<section>
+
+								<dl class="alt">
+								<br><br>
+									<dt>Phone</dt>
+									<dd>+52 (984) 202-0840</dd>
+									<dt>Email</dt>
+									<dd><a href="mailto:idit.programacion@iberopuebla.mx">idit.programacion@iberopuebla.mx</a> &bull; <a href="mailto:perezaguirrerafael@gmail.com">perezaguirrerafael@gmail.com</a></dd>
+								</dl>
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/mozta.rpa" class="icon fa-facebook alt"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/rafamozta/" class="icon fa-instagram alt"><span class="label">Instagram</span></a></li>
+									<li><a href="https://github.com/Mozta" class="icon fa-github alt"><span class="label">GitHub</span></a></li>
+								</ul>
+
+								<div class="partcile-dec" data-parcount="90"><canvas width="1714" height="402" style="display: block; background: rgba(255, 255, 255, 0);"></canvas></div>
+							</section>
+							<p class="copyright">&copy; 2019. Design: <a href="http://fabacademy.org/2019/labs/puebla/students/rafael-aguirre">Rafael</a>.</p>
+						</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
