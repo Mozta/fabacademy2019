@@ -1,0 +1,293 @@
+<!DOCTYPE HTML>
+<!--
+	Rafael Perez Aguirre
+	perezaguirrerafael@gmail.com
+	IDIT
+	idit.programacion@iberopuebla.mx
+-->
+<html>
+	<head>
+		<title>Networking and Communications</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<div class="hero-decor-let">
+        <div>- April 24 -</div>
+    </div>
+
+		<a class="contact-btn" href="index.html"><i class="fas fa-chevron-left"></i><span>Back</span></a>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><span class="my-span2">{ </span>Networking and Communications<span class="my-span2"> }</span></h1>
+						<div class="parallax-item-number3 ">Week .15</div>
+
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+							<!-- PCB -->
+								<section id="intro" class="main">
+									<div class="spotlight animated fadeIn delay-1s slow slow" >
+										<div class="content">
+											<header class="major">
+												<div class="section-subtitle ">Communications <span class="my-span2">//</span></div>
+											</header>
+										</div>
+
+									</div>
+
+									<div class="content">
+										<p>For this assignment we had to design, build and connect several wireless or wireless nodes with network or bus addresses in order to create a network that would allow communication between different cards.</p>
+										<p>The communication protocols between processors can be of different types, for example the UART, SPI and I2C protocols.</p>
+										<h3>UART</h3>
+										<p>A universal asynchronous receiver/transmitter (UART) is a block of circuitry responsible for implementing serial communication. Essentially, the UART acts as an intermediary between parallel and serial interfaces. On one end of the UART is a bus of eight-or-so data lines (plus some control pins), on the other is the two serial wires - RX and TX.</p>
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-12"><span class="image fit"><img src="images/week15/uart.png" alt="" /></span></div>
+											</div>
+										</div>
+										<h3>SPI</h3>
+										<p>The SPI Bus (Serial Peripheral Interface) is a communication standard, used mainly for the transfer of information between integrated circuits in electronic equipment. The Serial Peripheral Interface Bus or SPI bus is a standard for controlling almost any digital electronic device that accepts a serial bit stream regulated by a clock (synchronous communication).</p>
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-12"><span class="image fit"><img src="images/week15/spi.png" alt="" /></span></div>
+											</div>
+										</div>
+										<h3>I2C</h3>
+										<p>The Inter-integrated Circuit (I2C) Protocol is a protocol intended to allow multiple "slave" digital integrated circuits ("chips") to communicate with one or more "master" chips. Like the Serial Peripheral Interface (SPI), it is only intended for short distance communications within a single device. Like Asynchronous Serial Interfaces (such as RS-232 or UARTs), it only requires two signal wires to exchange information.</p>
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-12"><span class="image fit"><img src="images/week15/i2c.png" alt="" /></span></div>
+											</div>
+										</div>
+										<p>Below I show a comparative table of these three protocols.</p>
+
+										<div class="table-wrapper">
+											<table>
+												<thead>
+													<tr>
+														<th>-</th>
+														<th>UART</th>
+														<th>SPI</th>
+														<th>I2C</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Designation of pines</td>
+														<td>TxD: Data transmission.
+														RxD: Data reception.</td>
+														<td>SCLK: Serial Clock
+														MOSI: Master output, slave input.
+														MISO: Master input and slave output.
+														SS: Slave selector.</td>
+														<td>SDA: Data
+														SCL: Serial Clock</td>
+													</tr>
+													<tr>
+														<td>Data speed</td>
+														<td>The maximum communication can be between 230 Kbps to 460 Kbps</td>
+														<td>Normally supports between 10 Mbps to 20 Mbps</td>
+														<td>Up to 3.4 Mbps some variants can reach 1 Mbps</td>
+													</tr>
+													<tr>
+														<td>Distance</td>
+														<td>Less than 15 meters</td>
+														<td>It is designed for communications inside the board.</td>
+														<td>Same as the previous one, communications inside the board.</td>
+													</tr>
+													<tr>
+														<td>Communication type</td>
+														<td>Asynchronous</td>
+														<td>Synchronous</td>
+														<td>Synchronous</td>
+													</tr>
+													<tr>
+															<td>Hardware Complexity</td>
+															<td>Little bit</td>
+															<td>Half</td>
+															<td>High, according to the masters</td>
+													</tr>
+													<tr>
+															<td>Number of Masters</td>
+															<td>There are no masters</td>
+															<td>One</td>
+															<td>Many</td>
+													</tr>
+													<tr>
+														<td>Clock</td>
+														<td>Each device uses its internal one.</td>
+														<td>A clock signal between master and slave.</td>
+														<td>A common clock signal between multiple masters and slaves.</td>
+													</tr>
+													<tr>
+														<td>Protocol</td>
+														<td>8 bits with one start bit and one stop bit.</td>
+														<td>Each company uses its own protocol.</td>
+														<td>Use a start bit and a stop bit, an acknowledgment bit (ACK) every 8 bits.</td>
+													</tr>
+													<tr>
+														<td>Software Addressing</td>
+														<td>Communication is between two devices, it is not necessary.</td>
+														<td>The SS (SS1, SS2 ...) is used to select which device, the more devices plus SS outputs we need.</td>
+														<td>All masters can communicate with all slaves, we can place 27 slaves and place the address in the I2C protocol.</td>
+													</tr>
+													<tr>
+														<td>Advantage</td>
+														<td>Very simple, allows to connect quickly two devices, usually used with RS232 or RS485 for example.</td>
+														<td><ul>
+															<li>Simple.</li>
+															<li>It has full duplex communication.</li>
+															<li>SPI uses push-pull and great data speed.</li>
+															<li>Requires less energy than I2C</li>
+														</ul> </td>
+														<td><ul>
+															<li>More than one teacher.</li>
+															<li>You only need two cables for communication.</li>
+															<li>It's simpler than SPI, needing fewer lines.</li>
+															<li>Open collector concept</li>
+															<li>It has flow control.</li>
+														</ul> </td>
+
+													</tr>
+													<tr>
+														<td>Disadvantages</td>
+														<td><ul>
+															<li>It is limited to communication between two devices.</li>
+															<li>The speed must be agreed at the beginning of the connection if it is not the same will give erroneous readings.</li>
+														</ul>
+														 </td>
+														 <td>
+														 	<ul>
+																<li>The more slaves, the more connections are needed.</li>
+																<li>Adding a device requires an additional connection.</li>
+																<li>There is no flow control.</li>
+														 	</ul>
+														 </td>
+														 <td>
+														 	<ul>
+																<li>The complexity of the circuit increases when masters and slaves increase.</li>
+																<li>I2C is half duplex</li>
+																<li>The software can overload the processor.</li>
+														 	</ul>
+														 </td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+
+									</div>
+								</section>
+								<!-- EAGLE -->
+									<section id="intro" class="main">
+										<div class="spotlight animated fadeIn delay-1s slow slow" >
+											<div class="content">
+												<header class="major">
+													<div class="section-subtitle ">The network <span class="my-span2">//</span></div>
+												</header>
+												<p>For the individual assignment I decided to use 2 communication protocols, the UART and the I2C.</p>
+											</div>
+										</div>
+
+										<div class="content">
+											<p>The idea is to use the UART communication to connect the PC to the master card, and use the I2C communication to establish communication between the master card and 2 slave cards, with the purpose of being able to choose which to communicate by specifying which address to send the message. In this way I managed to create a network that merges 2 types of communications, UART and I2C.</p>
+											<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-12"><span class="image fit"><img src="images/week15/red3.jpeg" alt="" /></span></div>
+												</div>
+											</div>
+
+											<p>For the group assignment, which was to send a message between 2 projects, I chose to work as a team with my partner Letty, however, we did not have the necessary cards to carry out this task, so we decided to generate a serial production of many cards, so we designed a card with the minimum necessary to make communications.</p>
+											<blockquote >
+												This helped us both for the group and individual assignment, for the lack of cards.
+											</blockquote>
+											<p>The idea to send a message from my computer to my partner's, was to join my network created with yours, through the UART protocol. The following image illustrate this idea.</p>
+											<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-12"><span class="image fit"><img src="images/week15/redgrupal.jpeg" alt="" /></span></div>
+												</div>
+											</div>
+
+											<p>In this practice we had an unfortunate problem, in order to make the proposed network we needed more cards, because, until now, the cards we had were insufficient. To solve this dilemma, I decided to design a replicable card to mass produce (so to speak), in this way I could fulfill individual and group practice by cutting several cards.</p>
+											<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-12"><span class="image fit"><img src="images/week15/Captura de Pantalla 2019-06-21 a la(s) 19.26.06.png" alt="" /></span></div>
+													<div class="col-12"><span class="image fit"><img src="images/week15/Captura de Pantalla 2019-06-21 a la(s) 19.26.16.png" alt="" /></span></div>
+												</div>
+											</div>
+
+											<p>With this design, I joined several in Photoshop and then load them into fabmodules to generate the files to record and cut the pcb in the minimill.</p>
+											<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-6"><span class="image fit"><img src="images/week15/20190429_201939.jpg" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week15/20190429_221820.jpg" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week15/20190429_222200.jpg" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week15/20190429_232239.jpg" alt="" /></span></div>
+												</div>
+											</div>
+
+											<p>Finally I soldered the components and tested the cards. It is worth mentioning that only the cards are designed and each one is in charge of welding and testing their cards.</p>
+											<div class="box alt">
+												<div class="row gtr-uniform">
+													<div class="col-12"><span class="image fit"><img src="images/week15/20190430_180323.jpg" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week15/20190430_235120.jpg" alt="" /></span></div>
+													<div class="col-6"><span class="image fit"><img src="images/week15/20190430_235110.jpg" alt="" /></span></div>
+												</div>
+											</div>
+
+
+
+									</section>
+					</div>
+
+					<!-- Footer -->
+						<footer id="footer">
+							<section>
+								<h2>Contact information</h2>
+								<dl class="alt">
+									<dt>Address</dt>
+									<dd>Universidad Iberoamericana Puebla &bull; Instituto de Diseño e Innovación Tecnológica - IDIT &bull; Blvd. del Niño Poblano 2901, Reserva Territorial Atlixcáyotl &bull; CP 72820 San Andrés Cholula, Puebla, México</dd>
+								</dl>
+							</section>
+							<section>
+
+								<dl class="alt">
+								<br><br>
+									<dt>Phone</dt>
+									<dd>+52 (984) 202-0840</dd>
+									<dt>Email</dt>
+									<dd><a href="mailto:idit.programacion@iberopuebla.mx">idit.programacion@iberopuebla.mx</a> &bull; <a href="mailto:perezaguirrerafael@gmail.com">perezaguirrerafael@gmail.com</a></dd>
+								</dl>
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/mozta.rpa" class="icon fa-facebook alt"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/rafamozta/" class="icon fa-instagram alt"><span class="label">Instagram</span></a></li>
+									<li><a href="https://github.com/Mozta" class="icon fa-github alt"><span class="label">GitHub</span></a></li>
+								</ul>
+
+								<div class="partcile-dec" data-parcount="90"><canvas width="1714" height="402" style="display: block; background: rgba(255, 255, 255, 0);"></canvas></div>
+							</section>
+							<p class="copyright">&copy; 2019. Design: <a href="http://fabacademy.org/2019/labs/puebla/students/rafael-aguirre">Rafael</a>.</p>
+						</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
